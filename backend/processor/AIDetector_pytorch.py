@@ -23,11 +23,11 @@ class Detector(object):
     def model_init(self):
         parser = argparse.ArgumentParser()
         parser.add_argument('--weights', nargs='+', type=str,
-                            default='X:\Github\Yolov5-Flask-VUE\\backend\weights\yolov5s.pt',
+                            default='/weights/yolov5s.pt',
                             help='model path or triton URL')
-        parser.add_argument('--source', type=str, default='X:\毕业设计\源码\yolov5_7.0\yolov5\data\images\zidane.jpg',
+        parser.add_argument('--source', type=str, default='',     #X:\毕业设计\源码\yolov5_7.0\yolov5\data\images\zidane.jpg
                             help='file/dir/URL/glob/screen/0(webcam)')
-        parser.add_argument('--data', type=str, default='X:\毕业设计\源码\yolov5_7.0\yolov5\data\coco128.yaml',
+        parser.add_argument('--data', type=str, default='',  #X:\毕业设计\源码\yolov5_7.0\yolov5\data\coco128.yaml
                             help='(optional) dataset.yaml path')
         parser.add_argument('--imgsz', '--img', '--img-size', nargs='+', type=int, default=[640],
                             help='inference size h,w')
